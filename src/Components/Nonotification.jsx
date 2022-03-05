@@ -13,11 +13,6 @@ function Nonotification() {
             <h1 className='text-2xl text-gray-600 font-bold'>No New Notifications</h1>
             <p className='text-xl text-lightgray '>Notifications you received in the last 25 days will show up here.</p>
         </div>
-            
-            
-        
-        
-        
     </div>
         
     

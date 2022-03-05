@@ -43,7 +43,7 @@ function Addquestion() {
       setInputUrl("");
   }
   return (
-    <div><div className='self-center'><button onClick={()=>setOpenModal(true)} className='bg-red font-semibold  text-cyan-50 rounded-full lg:text-lg mx-4 sm:text-xs lg:px-6 lg:py-2'>Add question</button></div> 
+    <div><div className='flex items-center'><button onClick={()=>setOpenModal(true)} className='bg-red font-semibold hover:bg-darkred  text-cyan-50 rounded-full lg:text-lg mx-4 md:text-xs sm:text-xs lg:px-6 p-1'>Add question</button></div> 
     <Modal
     isOpen={openModal}
     onRequestClose={()=>setOpenModal(false)}
@@ -61,8 +61,8 @@ function Addquestion() {
      content: {
        position: 'absolute',
        top: '80px',
-       left: '350px',
-       right: '350px',
+       left: '20%',
+       right: '20%',
        bottom: '80px',
        border: '1px solid #ccc',
        background: '#fff',
@@ -72,6 +72,7 @@ function Addquestion() {
        outline: 'none',
        padding: '20px'
      }
+    
    }}
     >
       <div>

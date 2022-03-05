@@ -15,7 +15,7 @@ function Post({id, post, timestamp,imageUrl,postusers}) {
         <div className='p-4'>
         <div className='flex items-center'>
         <div className='h-10 w-10 bg-slate-400 rounded-full flex justify-center  self-center '>
-       <img className='rounded-lg' src={postusers.photo} alt="avatar"/>
+       <img className='rounded-lg' src={postusers.photo?postusers.photo:'https://st4.depositphotos.com/4329009/19956/v/380/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg?forcejpeg=true'} alt="avatar"/>
       </div>
       <div className='pl-2'>
       <h5 className='ml-1 text-lg hover:underline'>{postusers.displayName?postusers.displayName:postusers.email}</h5>
@@ -24,7 +24,7 @@ function Post({id, post, timestamp,imageUrl,postusers}) {
         </div>
         </div>
         <div>
-                <p className='text-xl  font-bold hover:underline my-2'>{post}</p>
+                <p className='lg:text-xl sm:text-base pl-4 font-bold hover:underline my-2'>{post}</p>
         </div>
         <div>
             <img className='w-full max-h-96' src={imageUrl} alt=""  />

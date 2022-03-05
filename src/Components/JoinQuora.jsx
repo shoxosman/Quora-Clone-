@@ -15,7 +15,7 @@ function JoinQuora() {
     const [active ,setActive]=useState(true)
   return (
     <div>
-      <div className=' mx-4 self-center '>  <button onClick={()=>setOpenModal(true)} className=' py-2 lg:text-lg outline outline-2 sm:text-xs outline-lightgray rounded-full px-5 bg-xlightgray' >Try Quora+</button></div>
+      <div className=' mx-4 self-center '>  <button onClick={()=>setOpenModal(true)} className=' py-1 lg:text-lg outline outline-2 sm:text-xs outline-lightgray rounded-full px-5 bg-xlightgray hover:bg-midgray' >Try Quora+</button></div>
       <div className=' hover:bg-xlightgray h-14 w-12 flex justify-center items-center'></div>
       <Modal
     isOpen={openModal}

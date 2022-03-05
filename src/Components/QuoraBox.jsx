@@ -50,7 +50,7 @@ function QuoraBox() {
         <div className='h-8 w-8 bg-slate-400 rounded-full flex justify-center  self-center '>
        <img src={user.photo?user.photo:'https://st4.depositphotos.com/4329009/19956/v/380/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg?forcejpeg=true'} className='slef-center rounded-full h-8 w-8'alt='' />
       </div>
-      <h5 className='text-lightgray py-2 pl-1'>{user.displayName?user.displayName:'username'}</h5>
+      <h5 className='text-lightgray py-2 pl-1'>{user.displayName?user.displayName:user.email}</h5>
       </div>
       <div>
           <p className='text-lightgray font-semibold lg:text-2xl sm:text-lg'>What do you want to ask or share ?</p>
@@ -74,8 +74,8 @@ function QuoraBox() {
      content: {
        position: 'absolute',
        top: '80px',
-       left: '350px',
-       right: '350px',
+       left: '20%',
+       right: '20%',
        bottom: '80px',
        border: '1px solid #ccc',
        background: '#fff',

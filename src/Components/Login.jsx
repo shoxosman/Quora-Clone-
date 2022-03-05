@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import {auth , provider ,facebookprovider} from "../firebase"
+
 
 function Login() {
     const today = new Date();
@@ -23,6 +25,8 @@ function Login() {
         setPassword('')
         setEmail('')
     };
+    
+    
     const Signin=()=>{
       auth.signInWithPopup(provider).catch((e)=>alert(e.message))
       console.log(auth);
@@ -31,6 +35,7 @@ function Login() {
       auth.signInWithPopup(facebookprovider).catch((e)=>alert(e.message))
       console.log(auth);
     }
+    
   return (
     <div className='h-screen w-full flex justify-center items-center login'>       
       <div className="flex flex-col w-3/5 bg-white rounded-sm mt-32 mb-32">
@@ -49,7 +54,7 @@ function Login() {
                 src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
                 alt=""
               />
-              <p>Continue With Google</p>
+             <p>Continue With Google</p> 
             </div>
             <div onClick={SigninFacebook} className="flex items-center py-2  my-2 outline outline-1 outline-lightgray w-4/5 rounded-sm hover:bg-xlightgray">
               <img
@@ -108,10 +113,10 @@ function Login() {
             </div>
             <div className="flex my-4 w-4/5 items-center justify-between">
               <p className='text-lightgray'> Forgot Password?</p>
-              <button 
+              <Link to="/"><button 
               type='submit'
               onClick={handlelogin}
-              className='bg-blue-600 text-white text-lg py-2 px-5  rounded-full hover:bg-blue-700' >Login </button>
+              className='bg-blue-600 text-white text-lg py-2 px-5  rounded-full hover:bg-blue-700' >Login </button></Link>
               <button 
               type='submit'
               onClick={Handleregister}
